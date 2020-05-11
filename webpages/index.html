@@ -65,8 +65,14 @@
 			<div class="col-md-12 text-center">
 				<button @click="backward" :disabled="loading || !connected" class="btn btn-primary">Go backward</button>
 			</div>
+			<!-- sound Play -->
+			<button @click="soundPlay" class="btn btn-warning" >Sound Play</button>
+			<!-- Record Video -->
+			<button class="btn btn-warning">Record Video</button>
+
 		</div>
 	</div>
+	<button id="startstop" style="outline-width: 0; background-color: transparent; border: none"><img id="startstopicon" src=""/></button>
 	<script type="text/javascript" src="main.js"></script>
 </body>
 

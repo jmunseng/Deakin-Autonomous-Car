@@ -1,11 +1,11 @@
-
+var carSound = new Audio('sound.wav')
 var app = new Vue({
     el: '#app',
     // storing the state of the page
     data: {
         connected: false,
         ros: null,
-        ws_address: 'ws://54.252.220.177:9090',
+        ws_address: 'ws://13.211.76.218:9090',
         logs: [],
         loading: false,
         topic: null,
@@ -85,6 +85,11 @@ var app = new Vue({
             })
             this.setTopic()
             this.topic.publish(this.message)
+        },
+        soundPlay: function () {
+            console.log("asdasd")
+            carSound.play()
+
         },
     },
     mounted() {
