@@ -5,7 +5,7 @@ var app = new Vue({
     data: {
         connected: false,
         ros: null,
-        ws_address: 'ws://13.211.76.218:9090',
+        ws_address: 'ws://13.210.131.171:9090',
         logs: [],
         loading: false,
         topic: null,
@@ -72,16 +72,16 @@ var app = new Vue({
         },
         turnLeft: function () {
             this.message = new ROSLIB.Message({
-                linear: { x: 0.5, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: 0.5, },
+                linear: { x: 1, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: 1.5, },
             })
             this.setTopic()
             this.topic.publish(this.message)
         },
         turnRight: function () {
             this.message = new ROSLIB.Message({
-                linear: { x: 0.5, y: 0, z: 0, },
-                angular: { x: 0, y: 0, z: -0.5, },
+                linear: { x: 1, y: 0, z: 0, },
+                angular: { x: 0, y: 0, z: -1.5, },
             })
             this.setTopic()
             this.topic.publish(this.message)
