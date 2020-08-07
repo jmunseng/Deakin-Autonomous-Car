@@ -1,0 +1,31 @@
+* already done => virtualenv venv --python=python3
+
+//open the shell type follow commend
+source venv/bin/activate
+
+cd webpages
+
+python -m http.server   # run server
+
+// open new shell type follow commend
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+// open new shell type follow commend check ip
+public_ip
+
+//open a browser type (ip):8000
+
+
+---------------------------------------------
+
+// topic and ros check
+
+rostopic list
+rostopic info /cmd_vel
+rosmsg show geometry_msgs/Twist
+
+sudo apt-get install ros-kinetic-rosbridge-suite
+
+source /opt/ros/kinetic/setup.bash
+
+roslaunch rosbridge_server rosbridge_websocket.launch
